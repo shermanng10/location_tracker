@@ -23,3 +23,5 @@ def handle_bad_request(e):
     return jsonify({'message': 'Oops, nothing to see here.'})
 
 from .db.database import initdb_command
+
+from .views import *
