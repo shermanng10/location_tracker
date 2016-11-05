@@ -1,0 +1,7 @@
+DROP TABLE if exists locations;
+CREATE TABLE locations (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  latitude TEXT NOT NULL,
+  longitude TEXT NOT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
