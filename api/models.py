@@ -1,7 +1,6 @@
 import json
 
 from .db.database import get_db
-from flask import current_app as app
 
 
 class Location(object):
@@ -30,6 +29,6 @@ class Location(object):
 
     def save(self, json_repr=True):
         db = get_db()
-        cur = db.execute("INSERT INTO locations (latitude, longitude) VALUES (?, ?)", (self.latitude, self.longitude))
+        db.execute("INSERT INTO locations (latitude, longitude) VALUES (?, ?)", (self.latitude, self.longitude))
         db.commit()
         return "Saved!"

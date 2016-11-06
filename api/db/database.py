@@ -2,6 +2,7 @@ import sqlite3
 from flask import g
 from .. import app
 
+
 # Copied straight out of the flaskr tutorial
 def connect_db():
     """Connects to the specific database."""
