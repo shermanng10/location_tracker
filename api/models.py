@@ -1,7 +1,7 @@
 import json
 
 from .db.database import get_db
-from . import app
+from flask import current_app as app
 
 
 class Location(object):
@@ -9,9 +9,6 @@ class Location(object):
     def __init__(self, latitude, longitude):
         self.latitude = latitude
         self.longitude = longitude
-
-    def _build_compliment(compliment):
-        return {'id': compliment['id'], 'text': compliment['text']} if compliment else abort(404)
 
     @classmethod
     def get_all(cls, json_repr=True):
